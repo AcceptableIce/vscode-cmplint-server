@@ -1,0 +1,17 @@
+{
+  "name": "vscode-cmplint-server",
+  "version": "0.1.0",
+  "description": "cmplint server for vscode extension",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "acceptableice",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "cmplint": "git@github.com:AcceptableIce/cmplint.git",
+    "is-plain-obj": "^1.1.0"
+  }
+}
