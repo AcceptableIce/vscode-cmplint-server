@@ -52,7 +52,7 @@ module.exports = function cmplintServer(options) {
 			};
 
 			return {
-				message: issue.message,
+				message: `${issue.message} (${issue.ruleId})`,
 				severity: issue.severity === "warning" ? 2 : 1,
 				source: "cmplint",
 				range: {
