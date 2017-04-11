@@ -41,14 +41,14 @@ module.exports = function cmplintServer(options) {
 	}
 
 	return cmplint(Object.assign({}, options))
-	.catch(error => Promise.reject(error))
+	.catch(error =>	Promise.reject(error))
 	.then(report => {
 		if(!report[options.filter]) return [];
 
 		return report[options.filter].map(issue => {
 			const position = {
 				line: issue.line - 1,
-				character: issue.column - 1
+				character: issue.column + 1
 			};
 
 			return {
